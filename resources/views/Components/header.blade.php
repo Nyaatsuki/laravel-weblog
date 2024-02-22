@@ -4,6 +4,7 @@
         <a>Blog blurb goes here</a>
     </div>
     <div class="login">
+        <!--TODO: Decide between profile image button or regular button-->
         <a>Account Button</a>
     </div>
 </div>

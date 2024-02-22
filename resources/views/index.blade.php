@@ -1,6 +1,7 @@
 <x-layout>
     <x-header></x-header>
 
+    <!--TODO: Foreach logic to display posts-->
     <div class="content">
         <article class="featured-post-container">
             <img src="https://i.redd.it/bm2svk0ndu771.jpg" class="featured-img">
