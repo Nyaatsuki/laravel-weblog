@@ -14,7 +14,7 @@
                     Labore ut ea ut fugiat cupidatat. Velit non tempor ea mollit. Quis in pariatur pariatur qui est et.</p>
             </div>
         </article>
-        <div class="grid-col-2 ">
+        <div class="grid-col-2">
             <article class="post-container">
                 <img src="https://i.redd.it/bm2svk0ndu771.jpg" class="small-img">
                 <div class="container-title">
