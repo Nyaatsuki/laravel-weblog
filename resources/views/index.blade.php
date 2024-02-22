@@ -3,7 +3,7 @@
 
     <div class="content">
         <article class="featured-post-container">
-            <img src="/img/dummy_1920x1080_000000_5e89c1_placeholder.png" class="featured-img">
+            <img src="https://i.redd.it/bm2svk0ndu771.jpg" class="featured-img">
             <div class="featured-text">
                 <div class="container-title">
                     <h3>Post title goes here</h3>
@@ -16,7 +16,7 @@
         </article>
         <div class="grid-col-2 ">
             <article class="post-container">
-                <img src="/img/dummy_1920x1080_000000_5e89c1_placeholder.png" class="small-img">
+                <img src="https://i.redd.it/bm2svk0ndu771.jpg" class="small-img">
                 <div class="container-title">
                     <h3>Post title goes here</h3>
                     <span>published <time>1 day ago</time></span>
@@ -26,7 +26,7 @@
                     Labore ut ea ut fugiat cupidatat. Velit non tempor ea mollit. Quis in pariatur pariatur qui est et.</p>
             </article>
             <article class="post-container">
-                <img src="/img/dummy_1920x1080_000000_5e89c1_placeholder.png" class="small-img">
+                <img src="https://i.redd.it/bm2svk0ndu771.jpg" class="small-img">
                 <div class="container-title">
                     <h3>Post title goes here</h3>
                     <span>published <time>1 day ago</time></span>
@@ -38,7 +38,7 @@
         </div>
         <div class="grid-col-3">
             <article class="post-container">
-                <img src="/img/dummy_1920x1080_000000_5e89c1_placeholder.png" class="small-img">
+                <img src="https://i.redd.it/bm2svk0ndu771.jpg" class="small-img">
                 <div class="container-title">
                     <h3>Post title goes here</h3>
                     <span>published <time>1 day ago</time></span>
@@ -48,7 +48,7 @@
                     Labore ut ea ut fugiat cupidatat. Velit non tempor ea mollit. Quis in pariatur pariatur qui est et.</p>
             </article>
             <article class="post-container">
-                <img src="/img/dummy_1920x1080_000000_5e89c1_placeholder.png" class="small-img">
+                <img src="https://i.redd.it/bm2svk0ndu771.jpg" class="small-img">
                 <div class="container-title">
                     <h3>Post title goes here</h3>
                     <span>published <time>1 day ago</time></span>
@@ -58,7 +58,7 @@
                     Labore ut ea ut fugiat cupidatat. Velit non tempor ea mollit. Quis in pariatur pariatur qui est et.</p>
             </article>
             <article class="post-container">
-                <img src="/img/dummy_1920x1080_000000_5e89c1_placeholder.png" class="small-img">
+                <img src="https://i.redd.it/bm2svk0ndu771.jpg" class="small-img">
                 <div class="container-title">
                     <h3>Post title goes here</h3>
                     <span>published <time>1 day ago</time></span>
