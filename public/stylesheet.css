@@ -1,0 +1,28 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    float:left;
+    margin-top: -30px;
+}
+
+.login {
+    float: right;
+    margin-right: 10px;
+}
+
+/* Index Page */
+
+.content {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
