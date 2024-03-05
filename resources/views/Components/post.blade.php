@@ -10,7 +10,7 @@
         <p></p> Labore ut ea ut fugiat cupidatat. Velit non tempor ea mollit. Quis in pariatur pariatur qui est et.</p>
     </div>
     <div class="container-author">
-        <p>Written By </p>
-        <a href="/">John Smith</a>
+        <em><strong><p>Written By </p>
+        <a href="/">John Smith</a></strong></em>
     </div>
 </article>
