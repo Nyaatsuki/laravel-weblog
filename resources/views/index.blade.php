@@ -72,4 +72,5 @@
         <!--<a>No posts yet, come back later!</a>-->
     </div>
 
+    <x-footer></x-footer>
 </x-layout>
