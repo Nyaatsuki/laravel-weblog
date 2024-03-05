@@ -50,6 +50,8 @@ body {
     height: auto;
 }
 
+/* Post Container */
+
 .post-container {
     padding: 10px;
     border: 2px solid rgba(170, 170, 170, 0.4);
@@ -86,4 +88,8 @@ body {
 .grid-col-3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.container-author {
+    display: block ruby;
 }

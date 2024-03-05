@@ -5,6 +5,6 @@
     </div>
     <div class="login">
         <!--TODO: Decide between profile image button or regular button-->
-        <a>Account Button</a>
+        <a href="/">Account Button</a>
     </div>
 </div>

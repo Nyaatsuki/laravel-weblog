@@ -1,1 +1,3 @@
-<div><p>Created by Luna</p></div>
+<footer>
+    <p>Created by Luna</p>
+</footer>
