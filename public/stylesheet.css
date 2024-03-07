@@ -1,6 +1,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+
 /* Header */
 
 .header {
@@ -67,12 +68,33 @@ body {
     height: auto;
 }
 
+.container-footer {
+    display: block ruby;
+}
+
 .container-excerpt {
     line-height: 1.5;
 }
 
 .container-author {
     display: block ruby;
+}
+
+.read-btn {
+    float: right;
+    padding-top: 15px;
+    background-color: #ddd;
+    border: 1px #e6e6e6 solid;
+    border-radius: 15px;
+    padding: 2px 7px;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.read-btn:hover {
+    background-color: #b6b6b6;
+    border-color: #a3a2a2;
 }
 
 .featured-post-container {

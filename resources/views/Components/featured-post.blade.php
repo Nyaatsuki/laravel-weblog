@@ -10,9 +10,16 @@
             <p></p> Magna in voluptate ut amet laborum sint reprehenderit irure voluptate id. Consectetur qui nisi non aliqua voluptate quis fugiat. Sunt nulla minim amet labore consectetur ipsum non nulla nulla dolore qui.
             <p></p> Labore ut ea ut fugiat cupidatat. Velit non tempor ea mollit. Quis in pariatur pariatur qui est et.</p>
         </div>
-        <div class="container-author">
-            <em><strong><p>Written By </p>
-            <a href="/">John Smith</a></strong></em>
+        <div class="container-footer">
+            <div class="container-author">
+                <em><strong>
+                        <p>Written By </p>
+                        <a href="/">John Smith</a>
+                    </strong></em>
+            </div>
+            <a href="/" class="read-btn">
+                <p>Read More</p>
+            </a>
         </div>
     </div>
 </article>
