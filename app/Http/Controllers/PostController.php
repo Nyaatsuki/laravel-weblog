@@ -12,7 +12,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return view('index', [
+            'posts' => Post::orderBy('published_at', 'desc')->get(),
+        ]);
     }
 
     /**

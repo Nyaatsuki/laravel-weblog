@@ -3,17 +3,18 @@
 
     <!--TODO: Foreach logic to display posts-->
     <div class="content">
-        <x-featured-post></x-featured-post>
-        <div class="grid-col-2">
-            <x-post></x-post>
-            <x-post></x-post>
+        @if($posts->count())
+        <x-featured-post :post="$posts[0]" />
+        <div class="card-grid">
+        @Foreach ($posts->skip(1) as $post)
+        <div class="{{$loop->iteration < 3 ? 'grid-col-3' : 'grid-col-2'}}">
+            <x-post :post="$post"/>
         </div>
-        <div class="grid-col-3">
-            <x-post></x-post>
-            <x-post></x-post>
-            <x-post></x-post>
+        @endforeach
         </div>
-        <!--<a>No posts yet, come back later!</a>-->
+        @else
+        <a>No posts yet, come back later!</a>
+        @endif
     </div>
 
     <x-footer></x-footer>

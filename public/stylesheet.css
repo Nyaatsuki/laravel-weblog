@@ -28,15 +28,17 @@ body {
     margin-right: auto;
 }
 
-.grid-col-2 {
+.card-grid{
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin-bottom: 10px;
+    grid-template-columns: repeat(6,minmax(0,1fr));
+}
+
+.grid-col-2 {
+    grid-column: span 2;
 }
 
 .grid-col-3 {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-column: span 3;
 }
 
 /* Post Container */
@@ -46,6 +48,7 @@ body {
     border: 2px solid rgba(170, 170, 170, 0.4);
     border-radius: 25px;
     transition: 0.3s;
+    height: 725px;
 }
 
 .post-container:hover {
@@ -67,14 +70,14 @@ body {
     width: auto;
     height: auto;
 }
+.container-excerpt {
+    line-height: 1.5;
+}
 
 .container-footer {
     display: block ruby;
 }
 
-.container-excerpt {
-    line-height: 1.5;
-}
 
 .container-author {
     display: block ruby;
