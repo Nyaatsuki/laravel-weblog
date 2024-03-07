@@ -17,7 +17,7 @@
                     </strong></em>
             </div>
             <a href="/" class="read-btn">
-                <p>Read More</p>
+                <span>Read More</span>
             </a>
         </div>
     </div>

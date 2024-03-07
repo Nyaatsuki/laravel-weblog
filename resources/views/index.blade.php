@@ -1,7 +1,6 @@
 <x-layout>
     <x-header></x-header>
 
-    <!--TODO: Foreach logic to display posts-->
     <div class="content">
         @if($posts->count())
         <x-featured-post :post="$posts[0]" />
