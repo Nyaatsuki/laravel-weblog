@@ -14,6 +14,10 @@ body {
     margin-top: -30px;
 }
 
+.title a {
+    text-decoration: none;
+}
+
 .title h1 {
     color: #ff80b0;
     text-shadow: rgba(0,0,0, 0.3) 2px -1px;
@@ -30,6 +34,7 @@ body {
     color: black;
     padding: 4px 15px;
     text-decoration: none;
+    transition:none 0.3s;
 }
 
 .login a:hover {
