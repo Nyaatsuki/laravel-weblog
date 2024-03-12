@@ -12,7 +12,7 @@
         <div class="container-author">
             <em><strong>
                     <p>Written By </p>
-                    <a href="/">John Smith</a>
+                    <a href="/">{{$post->author->name}}</a>
                 </strong></em>
         </div>
         <a href="/" class="read-btn">
