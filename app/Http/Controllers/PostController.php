@@ -17,6 +17,13 @@ class PostController extends Controller
         ]);
     }
 
+    public function show(Post $post)
+    {
+        return view('show', [
+            'post' => $post
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -29,14 +36,6 @@ class PostController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Post $post)
     {
         //
     }
