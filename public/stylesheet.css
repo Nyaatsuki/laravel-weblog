@@ -158,6 +158,10 @@ body {
         display: initial;
         border: 0px;
     }
+
+    .login{
+        display: block ruby;
+    }
 }
 
 .featured-post-container:hover {
