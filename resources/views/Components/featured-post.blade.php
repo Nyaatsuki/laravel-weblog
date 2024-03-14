@@ -8,6 +8,7 @@
         </div>
         <div class="container-categories">
             <a href="posts/{{$post->slug}}">Featured</a>
+            <a href="/categories/{{$post->category->slug}}">{{$post->category->name}}</a>
         </div>
         <div class="container-excerpt">
             {!! $post->excerpt !!}
