@@ -1,6 +1,6 @@
 @props(['post'])
 <article>
-    <img src="https://i.redd.it/bm2svk0ndu771.jpg" class="featured-img">
+    <img src="img/placeholder.jpg" class="featured-img">
     <div class="featured-text">
         <div class="container-title">
             <h3>{{$post->title}}</h3>
