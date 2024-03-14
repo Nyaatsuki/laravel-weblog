@@ -8,7 +8,7 @@
         </div>
         <div class="container-categories">
             <a href="posts/{{$post->slug}}">Featured</a>
-            <a href="?category={{ $post->category->slug }}&{{ http_build_query(request()->except('category')) }}">{{$post->category->name}}</a>
+            <a href="/?category={{ $post->category->slug }}&{{ http_build_query(request()->except('category')) }}">{{$post->category->name}}</a>
         </div>
         <div class="container-excerpt">
             {!! $post->excerpt !!}
