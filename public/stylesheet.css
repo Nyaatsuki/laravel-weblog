@@ -82,6 +82,7 @@ body {
 .post-container {
     padding: 10px;
     transition: 0.3s;
+    overflow: hidden;
 }
 
 .container-title {
@@ -147,7 +148,6 @@ body {
 
 .read-btn {
     float: right;
-    padding-top: 15px;
     border: 3px #ff80b0 solid;
     border-radius: 15px;
     padding: 5px 7px;
@@ -164,9 +164,16 @@ body {
     padding: 10px;
     border: 2px solid rgba(170, 170, 170, 0.4);
     border-radius: 25px;
-    display: flex;
     margin-bottom: 10px;
     transition: 0.3s;
+}
+
+.featured-post-container article{
+    display: flex;
+}
+
+.featured-post-container:hover {
+    background: rgba(0, 0, 0, 0.1)
 }
 
 @media screen and (max-width: 1000px) {
@@ -174,9 +181,12 @@ body {
         display: initial;
     }
 
-    .featured-post-container {
+    .featured-post-container article{
         display: initial;
-        border: 0px;
+    }
+
+    .featured-img {
+        margin-bottom: 20px;
     }
 
     .login{
@@ -184,12 +194,8 @@ body {
     }
 
     .container-categories{
-        margin-top: -35px;
+        margin-top: -100px;
     }
-}
-
-.featured-post-container:hover {
-    background: rgba(0, 0, 0, 0.1)
 }
 
 .featured-img {

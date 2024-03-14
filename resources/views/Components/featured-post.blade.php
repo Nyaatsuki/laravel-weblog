@@ -1,5 +1,5 @@
 @props(['post'])
-<article class="featured-post-container">
+<article>
     <img src="https://i.redd.it/bm2svk0ndu771.jpg" class="featured-img">
     <div class="featured-text">
         <div class="container-title">
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <a href="posts/{{$post->slug}}" class="read-btn">
-                <span>Read More</span>
+                Read More
             </a>
         </div>
     </div>

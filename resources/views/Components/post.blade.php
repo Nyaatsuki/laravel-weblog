@@ -17,7 +17,7 @@
             </div>
         </div>
         <a href="posts/{{$post->slug}}" class="read-btn">
-            <span>Read More</span>
+            Read More
         </a>
     </div>
 </article>
