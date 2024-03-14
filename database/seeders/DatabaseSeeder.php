@@ -34,5 +34,14 @@ class DatabaseSeeder extends Seeder
             "user_id" => $user->find(2),
             "category_id" => $category->find(2)
          ]);
+
+         Post::factory(3)->create([
+            "user_id" => $user->find(1),
+            "category_id" => $category->find(2)
+         ]);
+         Post::factory(3)->create([
+             "user_id" => $user->find(2),
+             "category_id" => $category->find(1)
+          ]);
     }
 }

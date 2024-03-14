@@ -88,6 +88,7 @@ body {
 .container-title {
     margin-bottom: 10px;
     color: #ff80b0;
+    width: 400px;
 }
 
 .container-title span {
