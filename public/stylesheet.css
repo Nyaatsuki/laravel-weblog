@@ -94,6 +94,10 @@ body {
     margin-top: 15px;
 }
 
+.dropdown-button:hover {
+    cursor: pointer;
+}
+
 .dropdown-links {
     display: grid;
     text-align: center;
