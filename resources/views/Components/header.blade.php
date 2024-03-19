@@ -10,3 +10,6 @@
         <a href="/">Sign In</a>
     </div>
 </div>
+<div>
+    <x-category-dropdown></x-category-dropdown>
+</div>

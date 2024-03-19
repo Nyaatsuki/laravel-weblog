@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programmer's Syphon</title>
     <link rel="stylesheet" href="/stylesheet.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </head>
 
 <body>
-    <x-header></x-header>
     {{ $slot }}
 </body>
 

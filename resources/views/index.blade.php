@@ -1,4 +1,5 @@
 <x-layout>
+    <x-header></x-header>
     <div class="content">
         @if($posts->count())
         <div class="featured-post-container">
