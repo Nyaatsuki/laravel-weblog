@@ -8,7 +8,7 @@
     </div>
     
     {{-- Links --}}
-    <div x-show="show" style="display: none">
+    <div x-show="show" class="dropdown-links" style="display: none">
         {{ $slot }}
     </div>
 </div>

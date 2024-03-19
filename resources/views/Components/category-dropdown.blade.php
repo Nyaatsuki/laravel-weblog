@@ -1,14 +1,16 @@
 <x-dropdown>
     <x-slot name="trigger">
-        <button>
+        <button class = "dropdown-button">
 
             {{ isset($currentCategory) ? ucwords($currentCategory->name) : 'Categories' }}
+
+            <span> &#x25BC;</span>
 
         </button>
     </x-slot>
     <x-dropdown-item href="/" 
     :active="request()->routeIs('/')">
-    <strong>All</strong></x-dropdown-item>
+    All</x-dropdown-item>
 
     @foreach ($categories as $category)
     <x-dropdown-item href="/?category={{ $category->slug }}&{{ http_build_query(request()->except('category')) }}" 
