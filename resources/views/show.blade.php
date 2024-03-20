@@ -1,5 +1,6 @@
 <title>Programmer's Syphon | <?= $post->title; ?></title>
 <x-layout>
+    <x-header />
     <div class="show-container">
         <h1>{{$post->title}}</h1>
         <div class="show-category">
