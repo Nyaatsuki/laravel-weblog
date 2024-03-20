@@ -80,7 +80,8 @@ body {
 /* Dropdown */
 
 .category-dropdown {
-    margin-left: 780px;
+    display: flex;
+    justify-content: center;
 }
 
 .dropdown-button {
