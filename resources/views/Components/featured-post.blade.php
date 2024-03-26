@@ -13,6 +13,6 @@
         <div class="container-excerpt">
             {!! $post->excerpt !!}
         </div>
-        <x-container-footer :post='$post'/>
+        <x-container-footer :post='$post' />
     </div>
 </article>

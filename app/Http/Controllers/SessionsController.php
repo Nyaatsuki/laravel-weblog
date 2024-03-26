@@ -32,6 +32,6 @@ class SessionsController extends Controller
 
         session()->regenerate();
 
-            return redirect('/')->with('success', 'Welcome back!');
+        return redirect('/')->with('success', 'Welcome back!');
     }
 }

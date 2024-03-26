@@ -6,7 +6,7 @@
     <div @click="show = ! show">
         {{ $trigger }}
     </div>
-    
+
     {{-- Links --}}
     <div x-show="show" class="dropdown-links" style="display: none">
         {{ $slot }}
