@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PostController::class, 'index']);
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
-route::get('register', [RegistrationController::class, 'create']);
-route::post('register', [RegistrationController::class, 'store']);
+Route::get('register', [RegistrationController::class, 'create']);
+Route::post('register', [RegistrationController::class, 'store']);
