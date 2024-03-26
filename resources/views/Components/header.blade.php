@@ -7,7 +7,7 @@
     </div>
     <div class="login">
         <!--TODO: Decide between profile image button or regular button-->
-        <a href="/">Sign In</a>
+        <a href="/register">Sign In</a>
     </div>
 </div>
 <div class="category-dropdown">
