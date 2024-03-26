@@ -64,6 +64,12 @@ body {
     border-color: #ff5e9c;
 }
 
+@media screen and (max-width: 1000px) {
+    .login{
+        display: block;
+    }
+}
+
 /* Index Page */
 
 .content {
@@ -257,10 +263,6 @@ body {
 
     .featured-img {
         margin-bottom: 20px;
-    }
-
-    .login {
-        display: block ruby;
     }
 
     .featured-text .container-categories {
