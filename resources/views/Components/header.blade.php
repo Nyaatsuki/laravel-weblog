@@ -6,7 +6,6 @@
         <span>Blog blurb goes here</span>
     </div>
     <div class="login">
-        <!--TODO: Decide between profile image button or regular button-->
         @guest
         <div>
             <a href="/login">Login</a>
@@ -16,6 +15,7 @@
         </div>
         @endguest
         @auth
+        <!--TODO: Decide between profile image dropdown or logout + article create button-->
         <div>
             <form method="POST" action="/logout">
                 @csrf
