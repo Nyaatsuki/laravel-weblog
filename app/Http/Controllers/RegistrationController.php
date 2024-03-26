@@ -21,7 +21,9 @@ class RegistrationController extends Controller
             'email' => ['required', 'unique:users,email', 'email', 'max:255'],
         ]);
 
-        User::create($attributes);
+        $user = User::create($attributes);
+
+        auth()->login($user);
 
         return redirect('/')->with('success', 'Your account has been created!');
     }

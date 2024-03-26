@@ -7,7 +7,23 @@
     </div>
     <div class="login">
         <!--TODO: Decide between profile image button or regular button-->
-        <a href="/register">Sign In</a>
+        @guest
+        <div>
+            <a href="/login">Login</a>
+        </div>
+        <div>
+            <a href="/register">Register</a>
+        </div>
+        @endguest
+        @auth
+        <div>
+            <form method="POST" action="/logout">
+                @csrf
+
+                <button>Sign Out</button>
+            </form>
+        </div>
+        @endauth
     </div>
 </div>
 <div class="category-dropdown">

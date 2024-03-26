@@ -38,21 +38,29 @@ body {
 }
 
 .login {
+    display: block ruby;
     float: right;
     margin-right: 10px;
     margin-top: 15px;
 }
 
-.login a {
+.login div {
     border: 3px solid #ff80b0;
     border-radius: 15px;
-    color: black;
     padding: 4px 15px;
-    text-decoration: none;
     transition: none 0.3s;
 }
 
-.login a:hover {
+.login button, .login a {
+    text-decoration: none;
+    color: black;
+    border: none;
+    background: white;
+    font-size: 15px;
+}
+
+.login div:hover {
+    background: white;
     border-color: #ff5e9c;
 }
 
