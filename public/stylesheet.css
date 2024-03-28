@@ -8,7 +8,7 @@ body {
     position: fixed;
     text-align: center;
     width: 100%;
-    transition: none .3s;
+    transition: .3s;
 }
 
 .flashSuccess span {
@@ -16,6 +16,30 @@ body {
     border: 2px #ff80b0 solid;
     border-radius: 15px;
     padding: 3px 5px;
+}
+
+.create-article {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff80b0;
+    border: 1px #ff80b0 solid;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+}
+
+.create-article a {
+    display: block;
+    font-size: 80px;
+    text-decoration: none;
+    color: white;
+    margin-top: -24px;
+}
+
+.create-article:hover {
+    filter: brightness(85%);
 }
 
 /* Header */
@@ -39,6 +63,10 @@ body {
     text-shadow: rgba(0, 0, 0, 0.3) 2px -1px;
 }
 
+.title p {
+    margin-top: -20px;
+}
+
 .login {
     display: block ruby;
     float: right;
@@ -50,7 +78,7 @@ body {
     border: 3px solid #ff80b0;
     border-radius: 15px;
     padding: 4px 15px;
-    transition: none 0.3s;
+    transition: 0.3s;
 }
 
 .login button, .login a {

@@ -1,5 +1,5 @@
+<title>Programmer's Syphon | Sign In</title>
 <x-layout>
-    <x-header></x-header>
     <section>
         <main>
             <h1>Sign In</h1>

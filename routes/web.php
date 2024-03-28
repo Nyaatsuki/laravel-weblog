@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PostController::class, 'index']);
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
+Route::get('create-article', [PostController::class, 'create'])->middleware('auth');
+Route::post('create-article', [PostController::class, 'store'])->middleware('auth');
+
 Route::get('register', [RegistrationController::class, 'create'])->middleware('guest');
 Route::post('register', [RegistrationController::class, 'store'])->middleware('guest');
 

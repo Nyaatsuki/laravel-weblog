@@ -3,7 +3,7 @@
         <a href="/">
             <h1>Programmer's Syphon</h1>
         </a>
-        <span>Blog blurb goes here</span>
+        <p>Code written by a fool</p>
     </div>
     <div class="login">
         @guest

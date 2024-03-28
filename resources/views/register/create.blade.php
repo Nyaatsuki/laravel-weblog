@@ -1,5 +1,5 @@
+<title>Programmer's Syphon | Create Account</title>
 <x-layout>
-    <x-header></x-header>
     <section>
         <main>
             <h1>Register Your Account</h1>
