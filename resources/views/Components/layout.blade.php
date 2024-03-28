@@ -14,11 +14,7 @@
     <x-flash />
     <x-header />
     {{ $slot }}
-    @auth
-    <div class="create-article">
-        <a href="/create-article">+</a>
-    </div>
-    @endauth
+    <x-article-creator />
 </body>
 
 </html>

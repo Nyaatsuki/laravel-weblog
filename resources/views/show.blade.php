@@ -10,5 +10,4 @@
         </div>
         <x-author :post="$post" />
     </div>
-    </div>
 </x-layout>
