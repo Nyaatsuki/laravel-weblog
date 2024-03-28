@@ -1,6 +1,6 @@
 <title>Programmer's Syphon | Create Account</title>
 <x-layout>
-    <section>
+    <section class="login-form">
         <main>
             <h1>Register Your Account</h1>
             <form method="POST" action="/register">

@@ -1,6 +1,6 @@
 <title>Programmer's Syphon | Sign In</title>
 <x-layout>
-    <section>
+    <section class="login-form">
         <main>
             <h1>Sign In</h1>
             <form method="POST" action="/sessions">
