@@ -51,7 +51,7 @@ body {
     border-radius: 15px;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0.5s, opacity 0.5s linear;
 }
 
 .article-tooltip div {
@@ -272,7 +272,7 @@ body {
 .author-image {
     width: auto;
     height: 50px;
-    border-radius: 25px;
+    border-radius: 100%;
 }
 
 .container-author div {

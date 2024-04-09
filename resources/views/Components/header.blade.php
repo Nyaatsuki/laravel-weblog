@@ -27,5 +27,7 @@
     </div>
 </div>
 <div class="category-dropdown">
+    @if(! Request::is('create-article'))
     <x-category-dropdown></x-category-dropdown>
+    @endif
 </div>
