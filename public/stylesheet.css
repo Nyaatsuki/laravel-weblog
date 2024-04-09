@@ -114,9 +114,10 @@ body {
     border: none;
     background: white;
     font-size: 15px;
+    transition: .2s;
 }
 
-.login div:hover {
+.login div:hover, .submit-btn:hover {
     background: white;
     border-color: #ff5e9c;
 }
@@ -268,7 +269,6 @@ body {
     display: flex;
 }
 
-
 .author-image {
     width: auto;
     height: 50px;
@@ -386,4 +386,16 @@ body {
     border-radius: 10px;
     border: 1px solid #b3b3b3;
     resize: none;
+}
+
+.submit-btn {
+    border: 3px solid #ff80b0;
+    color: black;
+    background-color: white;
+    border-radius: 18px;
+    padding: 6px 18px;
+    font-size: 18px;
+    float: right;
+    transition: .2s;
+    margin-bottom: 50px;
 }
