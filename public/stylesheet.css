@@ -85,7 +85,7 @@ body {
 
 .title h1 {
     color: #ff80b0;
-    text-shadow: rgba(0, 0, 0, 0.3) 2px -1px;
+    text-shadow: rgba(0, 0, 0, 0.3) -2px 1px;
 }
 
 .title p {
