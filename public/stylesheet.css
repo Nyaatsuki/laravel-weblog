@@ -306,6 +306,16 @@ body {
     display: flex;
 }
 
+.featured-img {
+    max-width: 100%;
+    max-height: 300px;
+    margin-right: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px rgb(75, 75, 75);
+    width: auto;
+    height: auto;
+}
+
 @media screen and (max-width: 1000px) {
     .card-grid {
         display: initial;
@@ -317,21 +327,12 @@ body {
 
     .featured-img {
         margin-bottom: 20px;
+        max-height: 100%;
     }
 
     .featured-text .container-categories {
         margin-top: -100px;
     }
-}
-
-.featured-img {
-    max-width: 100%;
-    max-height: 300px;
-    margin-right: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 1px 5px rgb(75, 75, 75);
-    width: auto;
-    height: auto;
 }
 
 /* Show Page */
@@ -382,7 +383,6 @@ body {
 .article-creator textarea {
     width: 100%;
     height: 2500px;
-    margin: 20px 50px;
     border-radius: 10px;
     border: 1px solid #b3b3b3;
     resize: none;
@@ -398,4 +398,10 @@ body {
     float: right;
     transition: .2s;
     margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+    .article-creator {
+        width: 52rem;
+    }
 }
