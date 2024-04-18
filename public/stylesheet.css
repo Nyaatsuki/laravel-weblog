@@ -226,6 +226,10 @@ body {
     color: rgb(90, 90, 90);
 }
 
+.featured-text {
+    width: 100%;
+}
+
 .featured-text .container-categories {
     margin-top: -75px;
 }
@@ -391,10 +395,14 @@ body {
 /* article creator*/
 
 .article-creator {
-    width: 72rem;
+    width: 50rem;
     margin-right: auto;
     margin-left: auto;
     background: #ececec;
+}
+
+.article-creator form {
+    text-align: center;
 }
 
 .article-creator textarea {
@@ -423,9 +431,9 @@ body {
     border-radius: 18px;
     padding: 6px 18px;
     font-size: 18px;
-    float: right;
     transition: .2s;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
+    float: right;
 }
 
 @media screen and (max-width: 1000px) {
