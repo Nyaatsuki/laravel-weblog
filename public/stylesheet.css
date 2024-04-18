@@ -117,7 +117,8 @@ body {
     transition: .2s;
 }
 
-.login div:hover, .submit-btn:hover {
+.login div:hover,
+.submit-btn:hover {
     background: white;
     border-color: #ff5e9c;
 }
@@ -183,7 +184,8 @@ body {
 
 .dropdown-button:hover {
     cursor: pointer;
-    border-color: #ff5e9c;;
+    border-color: #ff5e9c;
+    ;
 }
 
 .dropdown-links {
@@ -292,7 +294,8 @@ body {
     border-color: #ff5e9c;
 }
 
-.read-btn, .login-form button {
+.read-btn,
+.login-form button {
     float: right;
     border: 3px #ff80b0 solid;
     border-radius: 15px;
@@ -302,7 +305,8 @@ body {
     transition: 0.3s;
 }
 
-.read-btn:hover, .login-form button:hover {
+.read-btn:hover,
+.login-form button:hover {
     border-color: #ff5e9c;
 }
 
@@ -380,7 +384,7 @@ body {
 }
 
 .login-form button {
-    float:none;
+    float: none;
     margin-top: 5px;
 }
 
@@ -395,9 +399,13 @@ body {
 .article-creator textarea {
     width: 100%;
     height: 2500px;
+    resize: none;
+}
+
+.article-creator textarea,
+.article-creator input {
     border-radius: 10px;
     border: 1px solid #b3b3b3;
-    resize: none;
 }
 
 .submit-btn {

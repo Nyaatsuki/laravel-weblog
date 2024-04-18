@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class PostController extends Controller
 {
@@ -37,7 +38,28 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        //TODO: Category selection.
+
+        $body = preg_split( '/\r\n|\r|\n/', request()->input('body'));
+        $body = '<p>' . implode( '</p><p>', $body) . '</p>';
+
+        $attributes = request()->validate([
+            'body' => ['required'],
+            'title' => ['required']
+        ]);
+
+        Post::create([
+            'title' => request()->input('title'),
+            'excerpt' => substr($body, 0, 100) .'...',
+            'user_id' => auth()->user()->id,
+            'category_id' => 1,
+            'slug' => request()->input('title'),
+            'body' => $body,
+            'published_at' => date("Y-m-d H:i:s")
+            ], $attributes);
+
+        return redirect('/');
     }
 
     /**
