@@ -39,7 +39,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
 
-        //TODO: Category selection.
+        //TODO: Category selection + add images to posts.
 
         $body = preg_split( '/\r\n|\r|\n/', request()->input('body'));
         $body = '<p>' . implode( '</p><p>', $body) . '</p>';
