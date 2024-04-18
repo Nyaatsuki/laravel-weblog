@@ -39,7 +39,7 @@ body {
 }
 
 .create-article:hover {
-    filter: brightness(85%);
+    background-color: #ff5e9c;
 }
 
 .article-tooltip {
@@ -178,10 +178,12 @@ body {
     padding: 5px 7px;
     width: 98px;
     margin-top: 15px;
+    transition: .3s;
 }
 
 .dropdown-button:hover {
     cursor: pointer;
+    border-color: #ff5e9c;;
 }
 
 .dropdown-links {
@@ -243,7 +245,6 @@ body {
 
 .container-categories a:hover,
 .show-category a:hover {
-    background-color: #fdcbdf;
     border-color: #ff5e9c;
 }
 
@@ -278,6 +279,17 @@ body {
 .container-author div {
     margin-left: 5px;
     margin-top: 10px;
+}
+
+.container-author a {
+    color: #ff80b0;
+    text-decoration: none;
+    border-bottom: 1px #ffffff solid;
+}
+
+.container-author a:visited {
+    color: #ff5e9c;
+    border-color: #ff5e9c;
 }
 
 .read-btn, .login-form button {
