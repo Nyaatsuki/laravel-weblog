@@ -51,7 +51,7 @@ class PostController extends Controller
 
         Post::create([
             'title' => request()->input('title'),
-            'excerpt' => substr($body, 0, 100) .'...',
+            'excerpt' => str_replace("</p>", "", substr($body, 0, 600)) .'...',
             'user_id' => auth()->user()->id,
             'category_id' => 1,
             'slug' => request()->input('title'),

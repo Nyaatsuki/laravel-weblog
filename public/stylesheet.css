@@ -213,6 +213,7 @@ body {
     padding: 10px;
     transition: 0.3s;
     overflow: hidden;
+    position: relative;
 }
 
 .container-title {
@@ -227,14 +228,18 @@ body {
 
 .featured-text {
     width: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    position: relative;
 }
 
 .featured-text .container-categories {
-    margin-top: -75px;
+    margin-top: 25px;
 }
 
 .container-categories {
-    float: right;
+    position: absolute;
+    right: 0
 }
 
 .container-categories a,
@@ -264,6 +269,7 @@ body {
 
 .container-excerpt {
     line-height: 1.5;
+    margin-bottom: 70px;
 }
 
 .container-footer {
