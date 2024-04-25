@@ -361,7 +361,7 @@ body {
     }
 
     .featured-text .container-categories {
-        margin-top: -100px;
+        margin-top: 0px;
     }
 
     .grid-col-2, .grid-col-3 {
