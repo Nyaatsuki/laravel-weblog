@@ -48,6 +48,8 @@ body {
     right: -30px;
     bottom: 80px;
     width: 150px;
+    font-size: 16px;
+    color: black;
     background: rgba(0, 0, 0, 0.15);
     border-radius: 15px;
     visibility: hidden;
@@ -63,7 +65,7 @@ body {
     right: 56px;
 }
 
-.create-article:hover .article-tooltip {
+.create-article:hover .article-tooltip, .submit-btn:hover .article-tooltip {
     visibility: visible;
     opacity: 1;
 }
@@ -450,15 +452,22 @@ body {
 }
 
 .submit-btn {
-    border: 3px solid #ff80b0;
-    color: black;
-    background-color: white;
-    border-radius: 18px;
-    padding: 6px 18px;
-    font-size: 18px;
+    position: fixed;
+    border: none;
+    color: white;
+    background-color: #ff80b0;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    font-size: 42px;
     transition: .2s;
-    margin-bottom: 15px;
+    right: 40px;
+    bottom: 20px;
     float: right;
+}
+
+.submit-btn:hover {
+    background-color: #ff5e9c;
 }
 
 @media screen and (max-width: 1000px) {
