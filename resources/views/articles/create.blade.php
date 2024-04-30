@@ -8,7 +8,8 @@
                 <li>{{ $error }}</li>
                 @endforeach
             </p>
-            <button class="submit-btn" type="submit">&#128428;<span class="article-tooltip">Save your article
+            <button class="submit-btn" type="submit">&#128428;
+                <span class="article-tooltip">Save your article
                     <div></div>
                 </span></button>
         </form>
