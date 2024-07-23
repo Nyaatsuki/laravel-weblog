@@ -54,7 +54,7 @@ class PostController extends Controller
             'excerpt' => str_replace("</p>", "", substr($body, 0, 600)) .'...',
             'user_id' => auth()->user()->id,
             'category_id' => 1,
-            'slug' => str_replace(" ", "-", request()->input('title')),
+            'slug' => strtolower(str_replace(" ", "-", request()->input('title'))),
             'body' => $body,
             'published_at' => date("Y-m-d H:i:s")
             ], $attributes);
