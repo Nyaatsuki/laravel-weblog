@@ -7,7 +7,7 @@
     </div>
     <div class="login">
         @guest
-        <div>
+        <div class="login-button">
             <a href="/login">Login</a>
         </div>
         <div>
@@ -16,13 +16,19 @@
         @endguest
         @auth
         <!--TODO: Decide between profile image dropdown or logout + article create button-->
-        <div>
+        <div class="avatar">
+            <a href="/?author={{ auth()->user()->username }}&{{ http_build_query(request()->except('author')) }}">
+                <img src="img/{{ auth()->user()->avatar }}">
+            </a>
+        </div>
+        <!--<div>
             <form method="POST" action="/logout">
                 @csrf
 
                 <button>Sign Out</button>
             </form>
-        </div>
+        </div>-->
+
         @endauth
     </div>
 </div>
