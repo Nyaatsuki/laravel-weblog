@@ -10,24 +10,24 @@
         <div class="login-button">
             <a href="/login">Login</a>
         </div>
-        <div>
+        <div class="login-button">
             <a href="/register">Register</a>
         </div>
         @endguest
         @auth
-        <!--TODO: Decide between profile image dropdown or logout + article create button-->
         <div class="avatar">
             <a href="/?author={{ auth()->user()->username }}&{{ http_build_query(request()->except('author')) }}">
                 <img src="img/{{ auth()->user()->avatar }}">
             </a>
         </div>
-        <!--<div>
+        <!--TODO: add this to a dropdown menu-->
+        <div class="login-button">
             <form method="POST" action="/logout">
                 @csrf
 
                 <button>Sign Out</button>
             </form>
-        </div>-->
+        </div>
 
         @endauth
     </div>

@@ -129,8 +129,8 @@ body {
     transition: 0.3s;
 }
 
-.login-button button,
-.login-button a {
+.login button,
+.login a {
     text-decoration: none;
     color: black;
     border: none;
