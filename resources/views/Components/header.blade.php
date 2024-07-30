@@ -24,7 +24,6 @@
         <div class="login-button">
             <form method="POST" action="/logout">
                 @csrf
-
                 <button>Sign Out</button>
             </form>
         </div>
