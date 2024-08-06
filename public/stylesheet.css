@@ -294,6 +294,10 @@ body {
     margin-bottom: 15px;
 }
 
+.show-container .small-img {
+    margin-top: 5px;
+}
+
 .container-excerpt {
     line-height: 1.5;
     margin-bottom: 70px;
@@ -412,7 +416,7 @@ body {
 }
 
 .show-category {
-    right: 10;
+    right: 15;
     top: 20;
     position: absolute;
 }
