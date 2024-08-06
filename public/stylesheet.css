@@ -320,8 +320,12 @@ body {
     position: initial;
 }
 
-.featured-post-container .container-author, .featured-post-container .read-btn{
+.featured-post-container .container-author {
     bottom: 0;
+}
+
+.featured-post-container .read-btn {
+    bottom: 5px;
 }
 
 .author-image {
