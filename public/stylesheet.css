@@ -313,7 +313,7 @@ body {
 .container-author {
     display: flex;
     position: absolute;
-    bottom: 20px;
+    bottom: 25px;
 }
 
 .show-container .container-author {
@@ -357,7 +357,7 @@ body {
     transition: 0.3s;
     position: absolute;
     right: 10px;
-    bottom: 30px;
+    bottom: 35px;
 }
 
 .login-form button {
