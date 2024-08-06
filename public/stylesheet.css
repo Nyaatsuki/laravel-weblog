@@ -316,6 +316,10 @@ body {
     bottom: 20px;
 }
 
+.show-container .container-author {
+    position: initial;
+}
+
 .author-image {
     width: auto;
     height: 50px;
