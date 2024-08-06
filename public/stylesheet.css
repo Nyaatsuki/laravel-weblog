@@ -236,6 +236,7 @@ body {
     transition: 0.3s;
     overflow: hidden;
     position: relative;
+    height: 100%;
 }
 
 .container-title {
@@ -301,7 +302,6 @@ body {
 .container-excerpt {
     line-height: 1.5;
     margin-bottom: 70px;
-    height: 200px;
     overflow: hidden;
 }
 
@@ -312,6 +312,8 @@ body {
 
 .container-author {
     display: flex;
+    position: absolute;
+    bottom: 20px;
 }
 
 .author-image {
@@ -345,6 +347,9 @@ body {
     text-decoration: none;
     color: black;
     transition: 0.3s;
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
 }
 
 .read-btn:hover,
