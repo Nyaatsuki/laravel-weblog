@@ -1,3 +1,5 @@
+<!--TODO: Images and category selection-->
+
 <x-layout>
     <section class="article-creator">
         <form method="POST" action="/create-article">
