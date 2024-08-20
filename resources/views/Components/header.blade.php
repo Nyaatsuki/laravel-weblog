@@ -19,14 +19,15 @@
             <a href="/?author={{ auth()->user()->username }}&{{ http_build_query(request()->except('author')) }}">
                 <img src="/img/{{ auth()->user()->avatar }}">
             </a>
-        </div>
-        <!--TODO: add this to a dropdown menu-->
-        <div class="login-button">
+            <div class="login-dropdown">
             <form method="POST" action="/logout">
                 @csrf
                 <button>Sign Out</button>
             </form>
         </div>
+        </div>
+        <!--TODO: add this to a dropdown menu-->
+
 
         @endauth
     </div>

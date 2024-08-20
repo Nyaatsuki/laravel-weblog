@@ -104,14 +104,38 @@ body {
     overflow: clip;
     width: 50px;
     height: 50px;
+    transition: 0.3s;
 }
 
 .avatar img{
     width: 100%;
     height: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.avatar:hover .login-dropdown{
+    display:block;
+    animation-name: movediv;
+    animation-duration: 0.5s;
+}
+
+.login-dropdown {
+    display: none;
+    position: absolute;
+    right: 3px;
+    border-radius: 20px;
+    background: white;
+    top: 70px;
+}
+
+@keyframes movediv {
+    0% {top: 30px;}
+    100% {top: 70px;}
 }
 
 .login-button {
+    background: white;
     border-radius: 15px;
     padding: 4px 15px;
     height: 20px;
@@ -134,7 +158,7 @@ body {
     text-decoration: none;
     color: black;
     border: none;
-    background: white;
+    background: transparent;
     font-size: 15px;
     transition: .2s;
 }
