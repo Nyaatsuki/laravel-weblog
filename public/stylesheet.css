@@ -126,7 +126,9 @@ body {
     border-radius: 20px;
     background: white;
     top: 70px;
-    transparent:
+    width: 65px;
+    height: 25px;
+    text-align: center;
 }
 
 @keyframes movediv {
