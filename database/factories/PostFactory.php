@@ -23,7 +23,7 @@ class PostFactory extends Factory
             'category_id' => Category::factory(),
             'title' => fake()->sentence(),
             'slug' => fake()->slug(),
-            'image' => "placeholder.jpg",
+            'image' => "/defaults/placeholder.jpg",
             'excerpt' => '<p>' . implode( '</p><p>', fake()->paragraphs(2)) . '</p>',
             'body' => '<p>' . implode( '</p><p>', fake()->paragraphs(random_int(10, 20))) . '</p>',
             'published_at' => fake()->dateTimeThisMonth()->format('Y-m-d H:i:s')

@@ -39,4 +39,8 @@ class Post extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    protected $attributes = [
+        'image' => '/defaults/placeholder.jpg',
+    ];
 }

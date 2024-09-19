@@ -60,7 +60,7 @@ class PostController extends Controller
             'user_id' => auth()->user()->id,
             'category_id' => 1,
             'slug' => strtolower(str_replace(" ", "-", request()->input('title'))),
-            'image' => $imageName,
+            'image' => '/img/'.$imageName,
             'body' => $body,
             'published_at' => date("Y-m-d H:i:s")
             ], $attributes);

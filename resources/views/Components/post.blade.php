@@ -1,6 +1,6 @@
 @props(['post'])
 <article class="post-container">
-    <img src="/img/{{ $post->image }}" class="small-img">
+    <img src="{{ $post->image }}" class="small-img">
     <x-container-categories :post="$post" />
     <div class="container-title">
         <h3>{{$post->title}}</h3>

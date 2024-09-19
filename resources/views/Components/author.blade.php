@@ -1,5 +1,5 @@
 <div class="container-author">
-    <img class="author-image" src="/img/{{ $post->author->avatar }}">
+    <img class="author-image" src="{{ $post->author->avatar }}">
     <div>
         @auth
 
