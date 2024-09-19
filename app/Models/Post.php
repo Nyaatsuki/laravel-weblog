@@ -9,7 +9,7 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'excerpt', 'body', 'user_id', 'category_id', 'slug', 'published_at'];
+    protected $fillable = ['title', 'excerpt', 'body', 'user_id', 'category_id', 'slug', 'published_at', 'image'];
 
     protected $with = ['category', 'author'];
     
@@ -39,8 +39,4 @@ class Post extends Model
     {
         return $this->belongsTo(Category::class);
     }
-
-    protected $attributes = [
-        'image' => 'placeholder.jpg',
-    ];
 }

@@ -509,7 +509,7 @@ body {
     resize: none;
 }
 
-.article-creator input {
+.article-creator #title {
     height: 34px;
     font-size: 34px;
     font-weight: bold;

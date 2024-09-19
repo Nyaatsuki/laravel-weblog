@@ -46,8 +46,12 @@ class PostController extends Controller
 
         $attributes = request()->validate([
             'body' => ['required'],
-            'title' => ['required']
+            'title' => ['required'],
+            'image'=> ['required','image','mimes:jpeg,jpg,png','max:2048']
         ]);
+
+        $imageName = time().'.'.$request->image->extension();
+        $request->image->move(public_path('img'), $imageName);
 
         Post::create([
             'title' => request()->input('title'),
@@ -55,6 +59,7 @@ class PostController extends Controller
             'user_id' => auth()->user()->id,
             'category_id' => 1,
             'slug' => strtolower(str_replace(" ", "-", request()->input('title'))),
+            'image' => $imageName,
             'body' => $body,
             'published_at' => date("Y-m-d H:i:s")
             ], $attributes);
