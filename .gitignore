@@ -4,6 +4,7 @@
 /public/hot
 /public/storage
 /public/img
+!/public/img/.gitkeep
 /storage/*.key
 /vendor
 .env
