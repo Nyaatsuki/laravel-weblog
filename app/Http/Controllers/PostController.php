@@ -40,7 +40,6 @@ class PostController extends Controller
     {
 
         //TODO: Category selection.
-        //TODO: Refrac public folder/image saving
 
         $body = preg_split( '/\r\n|\r|\n/', request()->input('body'));
         $body = '<p>' . implode( '</p><p>', $body) . '</p>';

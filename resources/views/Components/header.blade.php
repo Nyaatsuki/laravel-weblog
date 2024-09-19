@@ -17,7 +17,7 @@
         @auth
         <div class="avatar">
             <a href="/?author={{ auth()->user()->username }}&{{ http_build_query(request()->except('author')) }}">
-                <img src="/img/{{ auth()->user()->avatar }}">
+                <img src="{{ auth()->user()->avatar }}">
             </a>
             <div class="login-dropdown">
             <form method="POST" action="/logout">
