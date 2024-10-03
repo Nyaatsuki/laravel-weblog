@@ -20,15 +20,12 @@
                 <img src="{{ auth()->user()->avatar }}">
             </a>
             <div class="login-dropdown">
-            <form method="POST" action="/logout">
-                @csrf
-                <button>Sign Out</button>
-            </form>
+                <form method="POST" action="/logout">
+                    @csrf
+                    <button>Sign Out</button>
+                </form>
+            </div>
         </div>
-        </div>
-        <!--TODO: add this to a dropdown menu-->
-
-
         @endauth
     </div>
 </div>
