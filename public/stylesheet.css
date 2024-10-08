@@ -293,7 +293,7 @@ body {
 
 .container-categories {
     position: absolute;
-    right: 0
+    right: 5px;
 }
 
 .container-categories a,
@@ -358,6 +358,8 @@ body {
     width: auto;
     height: 50px;
     border-radius: 100%;
+    border: 2px #ff80b0 solid;
+
 }
 
 .container-author div {

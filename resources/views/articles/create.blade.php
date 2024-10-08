@@ -1,4 +1,4 @@
-<!--TODO: Images and category selection-->
+<!--TODO: category selection -->
 
 <x-layout>
     <section class="article-creator">
