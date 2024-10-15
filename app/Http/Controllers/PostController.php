@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Validation\ValidationException;
 
 class PostController extends Controller
@@ -30,7 +32,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('articles.create');
+        $categories = Category::all();
+        return view('articles.create', ['categories' => $categories]);
     }
 
     /**
@@ -39,15 +42,14 @@ class PostController extends Controller
     public function store(Request $request)
     {
 
-        //TODO: Category selection.
-
         $body = preg_split( '/\r\n|\r|\n/', request()->input('body'));
         $body = '<p>' . implode( '</p><p>', $body) . '</p>';
 
         $attributes = request()->validate([
             'body' => ['required'],
             'title' => ['required'],
-            'image'=> ['required','image','mimes:jpeg,jpg,png','max:2048']
+            'image'=> ['required','image','mimes:jpeg,jpg,png','max:2048'],
+            'categories' => ['required']
         ]);
 
         $imageName = time().'.'.$request->image->extension();
@@ -57,7 +59,7 @@ class PostController extends Controller
             'title' => request()->input('title'),
             'excerpt' => str_replace("</p>", "", substr($body, 0, 600)) .'...',
             'user_id' => auth()->user()->id,
-            'category_id' => 1,
+            'category_id' => request()->input('categories'),
             'slug' => strtolower(str_replace(" ", "-", request()->input('title'))),
             'image' => '/img/'.$imageName,
             'body' => $body,
