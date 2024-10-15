@@ -4,7 +4,7 @@
             @csrf
             <input type="text" id="title" name="title" placeholder="Title">
             <input type="file" id="image" name="image">
-            <select name="categories" id="categories">@foreach ($categories->all() as $category)
+            <select name="categories" class="create-dropdown" id="categories">@foreach ($categories->all() as $category)
                  <option value="{{ $category->id }}" id="categories" name="categories">{{$category->name}}</option>
                 @endforeach
             </p>

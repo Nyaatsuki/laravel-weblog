@@ -218,7 +218,7 @@ body {
     justify-content: center;
 }
 
-.dropdown-button {
+.dropdown-button, .create-dropdown {
     text-decoration: none;
     background-color: #ffffff;
     border: 3px #ff80b0 solid;
@@ -237,12 +237,10 @@ body {
 
 .dropdown-links {
     display: grid;
-    text-align: center;
     background-color: #e7e7e7;
-    width: 78px;
-    margin-left: 10px;
+    width: auto;
     position: absolute;
-    padding: 5px 0px;
+    padding: 5px 5px;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -516,6 +514,12 @@ body {
     font-size: 34px;
     font-weight: bold;
     margin-top: 20px;
+}
+
+.create-dropdown {
+    width: auto;
+    margin-bottom: 15px;
+    margin-top: 0px;
 }
 
 .article-creator textarea,
