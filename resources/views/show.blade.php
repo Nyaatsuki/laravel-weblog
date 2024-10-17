@@ -9,6 +9,14 @@
         <div>
             {!! $post->body !!}
         </div>
+        <br>
+        @auth
+        @if(Auth()->user()->username == $post->author->username)
+        <div>
+            <a class="read-btn" href="/posts/{{$post->slug}}/edit">edit<a>
+        </div>
+        @endif
+        @endauth
         <x-author :post="$post" />
     </div>
 </x-layout>

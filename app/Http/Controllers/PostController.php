@@ -74,7 +74,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        $categories = Category::all();
+        $strings=array('<p>', '</p>');
+        return view('articles.edit', ['categories' => $categories, 'post' => $post, 'strings' => $strings]);
     }
 
     /**
@@ -82,7 +84,25 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $body = preg_split( '/\r\n|\r|\n/', request()->input('body'));
+        $body = '<p>' . implode( '</p><p>', $body) . '</p>';
+
+        $attributes = request()->validate([
+            'body' => ['required'],
+            'title' => ['required'],
+            'categories' => ['required']
+        ]);
+
+        $post->update([
+            'title' => request()->input('title'),
+            'excerpt' => str_replace("</p>", "", substr($body, 0, 600)) .'...',
+            'user_id' => auth()->user()->id,
+            'category_id' => request()->input('categories'),
+            'slug' => strtolower(str_replace(" ", "-", request()->input('title'))),
+            'body' => $body
+        ], $attributes);
+
+        return redirect('/');
     }
 
     /**

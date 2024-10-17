@@ -1,5 +1,5 @@
 @auth
-@if(! Request::is('create-article'))
+@if(Request::is('/'))
 <div class="create-article">
     <span class="article-tooltip">Write a new article
         <div></div>

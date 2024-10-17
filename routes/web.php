@@ -22,6 +22,9 @@ Route::get('posts/{post:slug}', [PostController::class, 'show']);
 Route::get('create-article', [PostController::class, 'create'])->middleware('auth');
 Route::post('create-article', [PostController::class, 'store'])->middleware('auth');
 
+Route::get('posts/{post:slug}/edit', [PostController::class, 'edit'])->middleware('auth');
+Route::put('posts/{post:slug}/edit', [PostController::class, 'update'])->middleware('auth');
+
 Route::get('register', [RegistrationController::class, 'create'])->middleware('guest');
 Route::post('register', [RegistrationController::class, 'store'])->middleware('guest');
 
