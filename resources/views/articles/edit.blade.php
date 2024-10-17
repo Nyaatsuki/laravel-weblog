@@ -8,7 +8,7 @@
                  <option value="{{ $category->id }}" id="categories" name="categories">{{$category->name}}</option>
                 @endforeach
             </p>
-            <textarea name="body" id="body" placeholder="Post Body">{{ str_replace($strings, "", $post->body) }}</textarea>
+            <textarea name="body" id="body">{{ str_replace(array('<p>','</p>'), "", $body) }}</textarea>
             <p>@foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
                 @endforeach

@@ -76,7 +76,8 @@ class PostController extends Controller
     {
         $categories = Category::all();
         $strings=array('<p>', '</p>');
-        return view('articles.edit', ['categories' => $categories, 'post' => $post, 'strings' => $strings]);
+        $body = str_replace('</p><p></p><p>', "\r\n\r\n", $post->body);
+        return view('articles.edit', ['categories' => $categories, 'post' => $post, 'body' => $body]);
     }
 
     /**
