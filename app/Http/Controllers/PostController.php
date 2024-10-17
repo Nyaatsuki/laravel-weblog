@@ -82,7 +82,7 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Post $post)
+    public function update(Post $post)
     {
         $body = preg_split( '/\r\n|\r|\n/', request()->input('body'));
         $body = '<p>' . implode( '</p><p>', $body) . '</p>';
@@ -96,7 +96,6 @@ class PostController extends Controller
         $post->update([
             'title' => request()->input('title'),
             'excerpt' => str_replace("</p>", "", substr($body, 0, 600)) .'...',
-            'user_id' => auth()->user()->id,
             'category_id' => request()->input('categories'),
             'slug' => strtolower(str_replace(" ", "-", request()->input('title'))),
             'body' => $body
