@@ -15,6 +15,11 @@
         <div>
             <a class="read-btn" href="/posts/{{$post->slug}}/edit">edit<a>
         </div>
+        <form action="/posts/{{$post->slug}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="del-btn" value="Delete">Delete</button> 
+            </form>
         @endif
         @endauth
         <x-author :post="$post" />

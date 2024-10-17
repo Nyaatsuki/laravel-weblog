@@ -377,7 +377,7 @@ body {
 }
 
 .read-btn,
-.login-form button {
+.login-form button, .del-btn {
     float: right;
     border: 3px #ff80b0 solid;
     border-radius: 15px;
@@ -390,7 +390,7 @@ body {
     bottom: 35px;
 }
 
-.login-form button {
+.login-form button, {
     position: initial;
 }
 
@@ -547,6 +547,13 @@ body {
 
 .submit-btn:hover {
     background-color: #ff5e9c;
+}
+
+.del-btn {
+    border-color: #FF2034;
+    left: 10px;
+    right: initial;
+    bottom: 60px;
 }
 
 @media screen and (max-width: 1000px) {

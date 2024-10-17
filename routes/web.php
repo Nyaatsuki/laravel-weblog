@@ -25,6 +25,8 @@ Route::post('create-article', [PostController::class, 'store'])->middleware('aut
 Route::get('posts/{post:slug}/edit', [PostController::class, 'edit'])->middleware('auth');
 Route::put('posts/{post:slug}/edit', [PostController::class, 'update'])->middleware('auth');
 
+Route::delete('posts/{post:slug}', [PostController::class, 'destroy'])->middleware('auth');
+
 Route::get('register', [RegistrationController::class, 'create'])->middleware('guest');
 Route::post('register', [RegistrationController::class, 'store'])->middleware('guest');
 
