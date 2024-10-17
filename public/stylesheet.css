@@ -550,10 +550,14 @@ body {
 }
 
 .del-btn {
-    border-color: #FF2034;
+    border-color: #FF3034;
     left: 10px;
     right: initial;
     bottom: 60px;
+}
+
+.del-btn:hover {
+    border-color: #FF1032;
 }
 
 @media screen and (max-width: 1000px) {
