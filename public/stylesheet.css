@@ -67,7 +67,7 @@ body {
 }
 
 .create-article:hover .article-tooltip,
-.submit-btn:hover .article-tooltip {
+.submit-btn:hover .article-tooltip, .del-btn:hover .article-tooltip{
     visibility: visible;
     opacity: 1;
 }
@@ -559,14 +559,22 @@ body {
 }
 
 .del-btn {
-    border-color: #FF3034;
-    left: 10px;
-    right: initial;
-    bottom: 60px;
+    position: fixed;
+    border: none;
+    color: white;
+    background-color: #FF3034;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    font-size: 42px;
+    transition: .2s;
+    right: 120px;
+    bottom: 20px;
+    float: right;
 }
 
 .del-btn:hover {
-    border-color: #FF1032;
+    background-color: #FF1032;
 }
 
 @media screen and (max-width: 1000px) {
