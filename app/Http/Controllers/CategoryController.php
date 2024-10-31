@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use App\Http\Requests\StoreCategoryRequest;
+use Illuminate\Http\Request;
 use App\Http\Requests\UpdateCategoryRequest;
 
 class CategoryController extends Controller
@@ -27,7 +27,7 @@ class CategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreCategoryRequest $request)
+    public function store(Request $request)
     {
         //
     }

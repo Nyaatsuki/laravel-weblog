@@ -251,6 +251,7 @@ body {
     position: absolute;
     padding: 5px 5px;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .dropdown-links a {
