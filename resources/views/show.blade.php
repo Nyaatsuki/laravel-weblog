@@ -19,4 +19,5 @@
         @endauth
         <x-author :post="$post" />
     </div>
+    <x-footer></x-footer>
 </x-layout>
