@@ -42,29 +42,29 @@ class PostController extends Controller
     public function store(Request $request)
     {
 
-        $body = preg_split( '/\r\n|\r|\n/', request()->input('body'));
-        $body = '<p>' . implode( '</p><p>', $body) . '</p>';
+        $body = preg_split('/\r\n|\r|\n/', request()->input('body'));
+        $body = '<p>' . implode('</p><p>', $body) . '</p>';
 
         $attributes = request()->validate([
             'body' => ['required'],
             'title' => ['required'],
-            'image'=> ['required','image','mimes:jpeg,jpg,png','max:2048'],
+            'image' => ['required', 'image', 'mimes:jpeg,jpg,png', 'max:2048'],
             'categories' => ['required']
         ]);
 
-        $imageName = time().'.'.$request->image->extension();
+        $imageName = time() . '.' . $request->image->extension();
         $request->image->move(public_path('img'), $imageName);
 
         Post::create([
             'title' => request()->input('title'),
-            'excerpt' => str_replace("</p>", "", substr($body, 0, 600)) .'...',
+            'excerpt' => str_replace("</p>", "", substr($body, 0, 600)) . '...',
             'user_id' => auth()->user()->id,
             'category_id' => request()->input('categories'),
             'slug' => strtolower(str_replace(" ", "-", request()->input('title'))),
-            'image' => '/img/'.$imageName,
+            'image' => '/img/' . $imageName,
             'body' => $body,
             'published_at' => date("Y-m-d H:i:s")
-            ], $attributes);
+        ], $attributes);
 
         return redirect('/');
     }
@@ -75,7 +75,6 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         $categories = Category::all();
-        $strings=array('<p>', '</p>');
         $body = str_replace('</p><p></p><p>', "\r\n\r\n", $post->body);
         return view('articles.edit', ['categories' => $categories, 'post' => $post, 'body' => $body]);
     }
@@ -85,8 +84,8 @@ class PostController extends Controller
      */
     public function update(Post $post)
     {
-        $body = preg_split( '/\r\n|\r|\n/', request()->input('body'));
-        $body = '<p>' . implode( '</p><p>', $body) . '</p>';
+        $body = preg_split('/\r\n|\r|\n/', request()->input('body'));
+        $body = '<p>' . implode('</p><p>', $body) . '</p>';
 
         $attributes = request()->validate([
             'body' => ['required'],
@@ -96,7 +95,7 @@ class PostController extends Controller
 
         $post->update([
             'title' => request()->input('title'),
-            'excerpt' => str_replace("</p>", "", substr($body, 0, 600)) .'...',
+            'excerpt' => str_replace("</p>", "", substr($body, 0, 600)) . '...',
             'category_id' => request()->input('categories'),
             'slug' => strtolower(str_replace(" ", "-", request()->input('title'))),
             'body' => $body
