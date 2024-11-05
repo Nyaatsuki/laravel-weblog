@@ -19,5 +19,7 @@
         @endauth
         <x-author :post="$post" />
     </div>
+    <x-comments.create-comment :post="$post"></x-comments.create-comment>
+    <x-comments.show-comment></x-comments.show-comment>
     <x-footer></x-footer>
 </x-layout>

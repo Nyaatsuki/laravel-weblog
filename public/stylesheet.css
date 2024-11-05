@@ -502,7 +502,7 @@ body {
 
 /* article creator*/
 
-.article-creator {
+.article-creator, .comment-creator {
     width: 50rem;
     margin-right: auto;
     margin-left: auto;
@@ -586,4 +586,74 @@ body {
 
 footer {
     margin: 0px 5px;
+}
+
+/* comments */
+
+.comment-creator {
+    margin-top: 20px;
+    padding-top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 48rem;
+    height: 100px
+}
+
+.comment-creator textarea {
+    width: 700px;
+    border-radius: 10px;
+    border: 2px solid #ff80b0;
+    margin-bottom: 20px;
+    height: 55px;
+    resize: none;
+    overflow: hidden;
+}
+
+.comment-creator button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border: 3px #ff80b0 solid;
+    border-radius: 15px;
+    padding: 5px 7px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.comment-section {
+    margin-top: 15px;
+    padding: 10px 0px;
+    width: 48rem;
+    margin-right: auto;
+    margin-left: auto;
+    background: #ececec;
+    border-radius: 15px;
+}
+
+.comment {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px #ff80b080 dotted;
+}
+
+.comment p {
+    margin: auto;
+    border: 3px #ff80b0 solid;
+    border-radius: 15px;
+    background: #ffffff;
+    padding: 5px 7px;
+    width: 700px;
+    margin-bottom: 5px;
+}
+
+.comment div {
+    display: flex;
+    color: #ff80b0;
+    margin-left: 20px;
+}
+
+.comment div span {
+    margin-left: 5px;
+    margin-top: 10px;
 }

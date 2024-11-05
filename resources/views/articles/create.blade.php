@@ -1,3 +1,4 @@
+@props(['post'])
 <x-layout>
     <section class="article-creator">
         <form method="POST" action="/create-article" enctype="multipart/form-data">
