@@ -3,6 +3,7 @@
     <div class="show-container">
         <img src="{{ $post->image }}" class="small-img">
         <h1 class="show-title">{{$post->title}}</h1>
+        <span>published <strong><time>{{ \Carbon\Carbon::parse($post->published_at)->Format('F jS, Y') }}</time></strong></span>
         <div class="show-category">
             <a href="/?category={{ $post->category->slug }}&{{ http_build_query(request()->except('category')) }}">{{$post->category->name}}</a>
         </div>

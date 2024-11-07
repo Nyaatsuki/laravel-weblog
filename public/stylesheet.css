@@ -467,6 +467,10 @@ body {
     position: relative;
 }
 
+.show-container span {
+    color: #ff80b0;
+}
+
 .show-title {
     color: #ff80b0;
     width: 600px;

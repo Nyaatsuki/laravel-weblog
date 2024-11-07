@@ -40,6 +40,10 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function comments(){
+        return $this->hasMany(Comments::class);
+    }
+
     protected $attributes = [
         'image' => '/defaults/placeholder.jpg',
     ];
