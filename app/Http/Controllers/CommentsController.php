@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comments;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 
@@ -29,7 +30,9 @@ class CommentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /* TODO: Find diffferent methof for finding the id of post */
+        $post = Post::find($request->input('post-id'));
+        dd($post);
     }
 
     /**
