@@ -400,10 +400,6 @@ body {
     bottom: 35px;
 }
 
-.login-form button, {
-    position: initial;
-}
-
 .read-btn:hover,
 .login-form button:hover {
     border-color: #ff5e9c;
@@ -502,6 +498,7 @@ body {
 .login-form button {
     float: none;
     margin-top: 5px;
+    position: initial;
 }
 
 /* article creator*/
