@@ -34,17 +34,18 @@ class CommentsController extends Controller
         - Find diffferent method for finding the id of post 
         - Reseed DB*/
         $post = Post::find($request->input('post-id'));
-        dd($post);
         
+        dd($request->input('post-id'), auth()->user()->username, request()->input('comment-text'));
+
         $attributes = request()->validate([
             'body' => ['required'],
         ]);
 
         Comments::create([
             'user_id' => auth()->user()->id,
-            'body' => request()->input('title'),
+            'body' => request()->input('comment-text'),
         ], $attributes);
-        
+
     }
 
     /**
