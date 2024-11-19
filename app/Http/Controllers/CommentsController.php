@@ -30,9 +30,21 @@ class CommentsController extends Controller
      */
     public function store(Request $request)
     {
-        /* TODO: Find diffferent methof for finding the id of post */
+        /* TODO: 
+        - Find diffferent method for finding the id of post 
+        - Reseed DB*/
         $post = Post::find($request->input('post-id'));
         dd($post);
+        
+        $attributes = request()->validate([
+            'body' => ['required'],
+        ]);
+
+        Comments::create([
+            'user_id' => auth()->user()->id,
+            'body' => request()->input('title'),
+        ], $attributes);
+        
     }
 
     /**
