@@ -26,6 +26,14 @@ class CommentsController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     */
+    public function show(Comments $comments)
+    {
+        //TODO: Show comments on post
+    }
+
+    /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
@@ -46,14 +54,6 @@ class CommentsController extends Controller
             'body' => request()->input('comment-text'),
         ], $attributes);
 
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Comments $comments)
-    {
-        //
     }
 
     /**
