@@ -8,5 +8,6 @@
         <p style="color:red;">@foreach ($errors->all() as $error)
             <a>{{ $error }}</a>
             @endforeach
+        </p>
     </form>
 </section>
