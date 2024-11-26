@@ -23,6 +23,6 @@
     @auth
     <x-comments.create-comment :post="$post"></x-comments.create-comment>
     @endauth
-    <x-comments.show-comment></x-comments.show-comment>
+    <x-show-comments :post="$post"></x-show-comments>
     <x-footer></x-footer>
 </x-layout>

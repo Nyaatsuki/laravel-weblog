@@ -47,12 +47,13 @@ class CommentsController extends Controller
             'comment-text' => ['required'],
         ]);
 
-        dd($request->input('post-id'), auth()->user()->username, request()->input('comment-text'));
-
         Comments::create([
+            'post_id' => $request->input('post-id'),
             'user_id' => auth()->user()->id,
-            'body' => request()->input('comment-text'),
+            'body' => request()->input('comment-text')
         ], $attributes);
+
+        return redirect('/');
 
     }
 
