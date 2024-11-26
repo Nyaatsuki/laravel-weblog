@@ -22,7 +22,7 @@ class ShowComments extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.show-comments', [
+        return view('components.comments.show-comments', [
             'comments' => Comments::all()
         ]);
     }
