@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RegistrationController;
@@ -19,6 +20,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PostController::class, 'index']);
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
+
+Route::get('create-category', [CategoryController::class, 'create'])->middleware('auth');
+Route::post('create-category', [CategoryController::class, 'store'])->middleware('auth');
 
 Route::get('create-article', [PostController::class, 'create'])->middleware('auth');
 Route::post('create-article', [PostController::class, 'store'])->middleware('auth');

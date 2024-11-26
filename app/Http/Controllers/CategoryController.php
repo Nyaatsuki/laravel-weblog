@@ -20,7 +20,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('category.create-category');
     }
 
     /**
@@ -28,7 +28,16 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attributes = request()->validate([
+            'name' => ['required'],
+        ]);
+
+        Category::create([
+            'name' => request()->input('name'),
+            'slug' => strtolower(str_replace(" ", "-", request()->input('name'))),
+        ], $attributes);
+
+        return redirect('/create-article');
     }
 
     /**

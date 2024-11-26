@@ -5,10 +5,14 @@
             @csrf
             <input type="text" id="title" name="title" placeholder="Title">
             <input type="file" id="image" name="image">
-            <select name="categories" class="create-dropdown" id="categories">@foreach ($categories->all() as $category)
-                 <option value="{{ $category->id }}" id="categories" name="categories">{{$category->name}}</option>
-                @endforeach
-            </p>
+            <div>
+                <select name="categories" class="create-dropdown" id="categories">
+                    @foreach ($categories->all() as $category)
+                    <option value="{{ $category->id }}" id="categories" name="categories">{{$category->name}}</option>
+                    @endforeach
+                </select>
+                <a class="read-btn" href="create-category">Create a Category</a>
+            </div>
             <textarea name="body" id="body" placeholder="Post Body"></textarea>
             <p>@foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>

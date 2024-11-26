@@ -387,7 +387,7 @@ body {
 }
 
 .read-btn,
-.login-form button, .del-btn {
+.login-form button, .del-btn, .cat-sub {
     float: right;
     border: 3px #ff80b0 solid;
     border-radius: 15px;
@@ -401,7 +401,7 @@ body {
 }
 
 .read-btn:hover,
-.login-form button:hover {
+.login-form button:hover, .cat-sub:hover {
     border-color: #ff5e9c;
     cursor: pointer;
 }
@@ -525,6 +525,13 @@ body {
     font-size: 34px;
     font-weight: bold;
     margin-top: 20px;
+}
+
+.article-creator .read-btn, .cat-sub {
+    float: none;
+    position: initial;
+    font-size: 14px;
+
 }
 
 .create-dropdown {
