@@ -7,10 +7,11 @@
         <p>{{$comment->body}}</p>
         <div>
             <img class="author-image" src='{{ $comment->author->avatar }}'>
-            <span>Written By
-                <strong>
-                    <a>{{$comment->author->name}}</a>
-                </strong>
+            <span><strong>Commented By</strong>
+                <a>{{$comment->author->name}}</a>
+            </span>
+            <span><strong class="comment-time">posted</strong>
+                <time>{{ \Carbon\Carbon::parse($comment->created_at)->Format('F jS, Y: G:i') }}</time>
             </span>
         </div>
     </div>
