@@ -567,6 +567,20 @@ body {
     background-color: #ff5e9c;
 }
 
+.article-creator label {
+    color:#ff80b0;
+    font-weight: 700;
+}
+
+.article-creator div input {
+    width: auto;
+}
+
+.article-creator span {
+    color:#ff80b0;
+    font-weight: bold
+}
+
 .del-btn {
     position: fixed;
     border: none;

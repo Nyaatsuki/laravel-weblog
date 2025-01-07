@@ -11,7 +11,12 @@
                     <option value="{{ $category->id }}" id="categories" name="categories">{{$category->name}}</option>
                     @endforeach
                 </select>
+                <span>|</span>
                 <a class="read-btn" href="create-category">Create a Category</a>
+                <span>|</span>
+                <label for="Premium">
+                <input type="checkbox" name="Premium" value="Premium">
+                Premium Content</label>
             </div>
             <textarea name="body" id="body" placeholder="Post Body"></textarea>
             <p>@foreach ($errors->all() as $error)
