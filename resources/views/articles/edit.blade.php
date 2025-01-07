@@ -4,19 +4,28 @@
             @csrf
             @method('PUT')
             <input type="text" id="title" name="title" placeholder="Title" value="{{ $post->title }}">
-            <select name="categories" class="create-dropdown" id="categories" value="{{ $post->category_id }}">@foreach ($categories->all() as $category)
-                <option value="{{ $category->id }}" id="categories" name="categories">{{$category->name}}</option>
-                @endforeach
-                </p>
-                <textarea name="body" id="body">{{ str_replace(array('<p>','</p>'), "", $body) }}</textarea>
-                <p>@foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
+            <div>
+                <select name="categories" class="create-dropdown" id="categories" value="{{ $post->category_id }}">@foreach ($categories->all() as $category)
+                    <option value="{{ $category->id }}" id="categories" name="categories">{{$category->name}}
+                    </option>
                     @endforeach
-                </p>
-                <button class="submit-btn" type="submit">&#x1f5ac;
-                    <span class="article-tooltip">Save your article
-                        <div></div>
-                    </span></button>
+                </select>
+                <span>|</span>
+                <a class="read-btn" href="/create-category">Create a Category</a>
+                <span>|</span>
+                <label for="Premium">
+                    <input type="checkbox" name="Premium" value="Premium">
+                    Premium Content</label>
+            </div>
+            <textarea name="body" id="body">{{ str_replace(array('<p>','</p>'), "", $body) }}</textarea>
+            <p>@foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </p>
+            <button class="submit-btn" type="submit">&#x1f5ac;
+                <span class="article-tooltip">Save your article
+                    <div></div>
+                </span></button>
         </form>
         <form action="/posts/{{$post->slug}}" method="POST">
             @csrf
