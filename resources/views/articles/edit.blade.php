@@ -5,7 +5,9 @@
             @method('PUT')
             <input type="text" id="title" name="title" placeholder="Title" value="{{ $post->title }}">
             <div>
-                <select name="categories" class="create-dropdown" id="categories" value="{{ $post->category_id }}">@foreach ($categories->all() as $category)
+                <select name="categories" class="create-dropdown" id="categories" value="{{ $post->category_id }}">
+                    <option value="{{ $post->category->id }}" id="categories" name="categories" selected="selected">{{$post->category->name}}
+                        @foreach ($categories->except($post->category->id) as $category)
                     <option value="{{ $category->id }}" id="categories" name="categories">{{$category->name}}
                     </option>
                     @endforeach
