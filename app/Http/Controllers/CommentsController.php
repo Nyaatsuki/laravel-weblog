@@ -30,7 +30,6 @@ class CommentsController extends Controller
      */
     public function show(Comments $comments)
     {
-        //TODO: Show comments on post
     }
 
     /**
@@ -38,9 +37,6 @@ class CommentsController extends Controller
      */
     public function store(Request $request)
     {
-        /* TODO: 
-        - Find diffferent method for finding the id of post 
-        - Reseed DB*/
         $post = Post::find($request->input('post-id'));
 
         $attributes = request()->validate([
