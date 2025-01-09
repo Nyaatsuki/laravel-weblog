@@ -26,21 +26,23 @@
                     @else
                         <h2> Pffft, you don't have premium? What are you? Poor? Dumbass?</h2>
                     @endif
+                @else
+                    {!! $post->body !!}
                 @endif
             @endauth
         </div>
         <br>
         @auth
-        @if(Auth()->user()->username == $post->author->username)
-        <div>
-            <a class="read-btn" href="/posts/{{$post->slug}}/edit">edit<a>
-        </div>
-        @endif
+            @if(Auth()->user()->username == $post->author->username)
+            <div>
+                <a class="read-btn" href="/posts/{{$post->slug}}/edit">edit<a>
+            </div>
+            @endif
         @endauth
         <x-author :post="$post" />
     </div>
     @auth
-    <x-comments.create-comment :post="$post"></x-comments.create-comment>
+        <x-comments.create-comment :post="$post"></x-comments.create-comment>
     @endauth
     <x-show-comments :post="$post"></x-show-comments>
     <x-footer></x-footer>
