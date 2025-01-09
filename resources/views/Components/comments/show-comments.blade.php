@@ -9,6 +9,9 @@
             <img class="author-image" src='{{ $comment->author->avatar }}'>
             <span><strong>Commented By</strong>
                 <a>{{$comment->author->name}}</a>
+                @if($comment->author->premium_access == 1)
+                <a title="Premium User" style="cursor: default;">👑</a>
+                @endif
             </span>
             <span><strong class="comment-time">posted</strong>
                 <time>{{ \Carbon\Carbon::parse($comment->created_at)->Format('F jS, Y: G:i') }}</time>

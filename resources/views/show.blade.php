@@ -13,7 +13,7 @@
         <div>
             @guest
                 @if($post->premium_content == 1)
-                    <h2> You must log in and purchase premium before you can read this content </h2>
+                    <h2> You must <a href="/login">login</a> or <a href="/register">register</a> and <a href="/get-premium"> purchase premium </a> before you can read this content </h2>
                 @else
                     {!! $post->body !!}
                 @endif
@@ -24,7 +24,7 @@
                     @if(Auth()->user()->premium_access == 1)
                         {!! $post->body !!}
                     @else
-                        <h2> Pffft, you don't have premium? What are you? Poor? Dumbass?</h2>
+                        <h2> Uh Oh! you don't have premium! get it <a href="/get-premium">now!</a></h2>
                     @endif
                 @else
                     {!! $post->body !!}
