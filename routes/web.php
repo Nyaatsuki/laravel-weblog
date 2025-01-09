@@ -5,6 +5,7 @@ use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,3 +42,5 @@ Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth'
 
 Route::get('comment', [CommentsController::class,'create']);
 Route::post('comment', [CommentsController::class,'store']);
+
+Route::get('get-premium', [UserController::class, 'index'])->middleware('auth');

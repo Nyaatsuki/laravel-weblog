@@ -30,7 +30,7 @@
     </div>
 </div>
 <div class="category-dropdown">
-    @if(! Request::is('create-article'))
+    @if(Request::is('/'))
     <x-category-dropdown></x-category-dropdown>
     @endif
 </div>
