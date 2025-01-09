@@ -48,7 +48,7 @@ class PostController extends Controller
         $attributes = request()->validate([
             'body' => ['required'],
             'title' => ['required'],
-            'image' => ['required', 'image', 'mimes:jpeg,jpg,png', 'max:2048'],
+            'image' => ['required', 'image', 'mimes:jpeg,jpg,png', 'max:50000'],
             'categories' => ['required']
         ]);
 
@@ -63,7 +63,8 @@ class PostController extends Controller
             'slug' => strtolower(str_replace(" ", "-", request()->input('title'))),
             'image' => '/img/' . $imageName,
             'body' => $body,
-            'published_at' => date("Y-m-d H:i:s")
+            'published_at' => date("Y-m-d H:i:s"),
+            'premium_content' => request()->input('premium') ? true : false
         ], $attributes);
 
         return redirect('/');
@@ -76,7 +77,12 @@ class PostController extends Controller
     {
         $categories = Category::all();
         $body = str_replace('</p><p></p><p>', "\r\n\r\n", $post->body);
-        return view('articles.edit', ['categories' => $categories, 'post' => $post, 'body' => $body]);
+        if ($post->premium_content == 1){
+            $checked = "checked";
+        }else{
+            $checked = null;
+        }
+        return view('articles.edit', ['categories' => $categories, 'post' => $post, 'body' => $body, 'checked' => $checked]);
     }
 
     /**
@@ -98,7 +104,8 @@ class PostController extends Controller
             'excerpt' => str_replace("</p>", "", substr($body, 0, 600)) . '...',
             'category_id' => request()->input('categories'),
             'slug' => strtolower(str_replace(" ", "-", request()->input('title'))),
-            'body' => $body
+            'body' => $body,
+            'premium_content' => request()->input('premium') ? true : false
         ], $attributes);
 
         return redirect('/');

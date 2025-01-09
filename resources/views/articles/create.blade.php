@@ -14,8 +14,8 @@
                 <span>|</span>
                 <a class="read-btn" href="create-category">Create a Category</a>
                 <span>|</span>
-                <label for="Premium">
-                <input type="checkbox" name="Premium" value="Premium">
+                <label for="premium">
+                <input type="checkbox" id="premium" name="premium">
                 Premium Content</label>
             </div>
             <textarea name="body" id="body" placeholder="Post Body"></textarea>

@@ -6,9 +6,28 @@
         <span>published <strong><time>{{ \Carbon\Carbon::parse($post->published_at)->Format('F jS, Y') }}</time></strong></span>
         <div class="show-category">
             <a href="/?category={{ $post->category->slug }}&{{ http_build_query(request()->except('category')) }}">{{$post->category->name}}</a>
+            @if($post->premium_content)
+                <a>Premium</a>
+            @endif
         </div>
         <div>
-            {!! $post->body !!}
+            @guest
+                @if($post->premium_content == 1)
+                    <h2> Login or Create an account to read this content </h2>
+                @else
+                    {!! $post->body !!}
+                @endif
+            @endguest
+
+            @auth
+                @if($post->premium_content == 1)
+                    @if(Auth()->user()->premium_access == 1)
+                        {!! $post->body !!}
+                    @else
+                        <h2> You do not have access to this content! </h2>
+                    @endif
+                @endif
+            @endauth
         </div>
         <br>
         @auth

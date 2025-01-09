@@ -6,10 +6,7 @@
             <h3>{{$post->title}}</h3>
             <span>published <time>{{ \Carbon\Carbon::parse($post->published_at)->diffForHumans() }}</time></span>
         </div>
-        <div class="container-categories">
-            <a href="posts/{{$post->slug}}">Featured</a>
-            <a href="/?category={{ $post->category->slug }}&{{ http_build_query(request()->except('category')) }}">{{$post->category->name}}</a>
-        </div>
+        <x-container-categories :post="$post" />
         <div class="container-excerpt">
             {!! $post->excerpt !!}
         </div>

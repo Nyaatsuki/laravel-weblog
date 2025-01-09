@@ -15,8 +15,8 @@
                 <span>|</span>
                 <a class="read-btn" href="/create-category">Create a Category</a>
                 <span>|</span>
-                <label for="Premium">
-                    <input type="checkbox" name="Premium" value="Premium">
+                <label for="premium">
+                    <input type="checkbox" name="premium" id="premium" {{ $checked }}>
                     Premium Content</label>
             </div>
             <textarea name="body" id="body">{{ str_replace(array('<p>','</p>'), "", $body) }}</textarea>
