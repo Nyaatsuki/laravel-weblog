@@ -40,7 +40,8 @@ Route::get('login', [SessionsController::class, 'create'])->middleware('guest');
 Route::post('sessions', [SessionsController::class, 'store'])->middleware('guest');
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
-Route::get('comment', [CommentsController::class,'create']);
-Route::post('comment', [CommentsController::class,'store']);
+Route::get('comment', [CommentsController::class,'create'])->middleware('auth');
+Route::post('comment', [CommentsController::class,'store'])->middleware('auth');
 
 Route::get('get-premium', [UserController::class, 'index'])->middleware('auth');
+route::post('get-premium', [UserController::class, 'update'])->middleware('auth');

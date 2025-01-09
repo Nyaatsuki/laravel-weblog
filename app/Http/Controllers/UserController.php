@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -28,7 +29,6 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**
@@ -42,9 +42,19 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(User $user)
+    public function update(Request $request)
     {
-        //
+        $userId = Auth::id();
+        $user = User::findOrFail($userId);
+
+        if($user->premium_access == 1){
+            return redirect('/')->with('success', "You already have Premium!");
+        }else{
+            $user->update([
+                'premium_access' => $request->input('premium-btn')
+            ]);
+            return redirect('/')->with('success', "You are now a premium member!");
+        };
     }
 
     /**
