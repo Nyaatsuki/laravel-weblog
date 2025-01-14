@@ -41,7 +41,6 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-
         $body = preg_split('/\r\n|\r|\n/', request()->input('body'));
         $body = '<p>' . implode('</p><p>', $body) . '</p>';
 
