@@ -21,6 +21,8 @@
 
             @auth
                 @if($post->premium_content == 1)
+                <!-- TODO: overweeg om evt. een custom blade tag te maken om op premium access te controleren
+                 (via de appserviceprovider) -->
                     @if(Auth()->user()->premium_access == 1)
                         {!! $post->body !!}
                     @else

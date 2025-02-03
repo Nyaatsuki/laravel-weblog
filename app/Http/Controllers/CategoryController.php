@@ -28,10 +28,12 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        // TODO: maak aparte request form validation class voor hergebruik van validatie
         $attributes = request()->validate([
             'name' => ['required'],
         ]);
 
+        // TODO: gebruik alleen gevalideerde data voor opslaan in database, dus niet rechtstreeks uit request
         Category::create([
             'name' => request()->input('name'),
             'slug' => strtolower(str_replace(" ", "-", request()->input('name'))),

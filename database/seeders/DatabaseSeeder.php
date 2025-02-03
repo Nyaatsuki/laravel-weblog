@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // TODO: maak aparte seeders aan voor ieder model
         $category = Category::factory(2)->create();
 
         $user = User::factory()->create([

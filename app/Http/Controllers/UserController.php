@@ -45,6 +45,7 @@ class UserController extends Controller
     public function update(Request $request)
     {
         $userId = Auth::id();
+        // TODO: gebruik Auth::user()
         $user = User::findOrFail($userId);
 
         if($user->premium_access == 1){
